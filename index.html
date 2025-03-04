@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oddly Specific Food | Bingo</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <section class="instructions">
+      <h2>How to Play</h2>
+      <p>Each column represents a range of alphabetically ordered foods:</p>
+      <ul>
+        <li>B → Foods starting with A-E</li>
+        <li>I → Foods starting with F-J</li>
+        <li>N → Foods starting with K-O</li>
+        <li>G → Foods starting with P-T</li>
+        <li>O → Foods starting with U-Z</li>
+      </ul>
+      <h2>Playing the Game</h2>
+      <ol>
+        <li>When a food is called, check your bingo card.</li>
+        <li>If you have it, click on it to mark it.</li>
+        <li>Win the game by completing a line in any direction.</li>
+      </ol>
+      <h2>Game Buttons</h2>
+      <p><b>Randomise.</b> Generates a new bingo card.</p>
+      <p><b>Clear.</b> Removes all marks from your current card.</p>
+
+      <button class="card-button randomise">Randomise</button>
+      <button class="card-button clear">Clear</button>
+
+    </section>
+
+
+    <section class="bingo-container">
+      <h1>ODDLY SPECIFIC FOOD | BINGO</h1>
+
+      <div class="bingo-card">
+        <div class="bingo-cell letter">B</div>
+        <div class="bingo-cell letter">I</div>
+        <div class="bingo-cell letter">N</div>
+        <div class="bingo-cell letter">G</div>
+        <div class="bingo-cell letter">O</div>
+
+        <!-- First Column -->
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="first-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="second-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="third-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="fourth-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="fifth-column">BINGO</span>
+        </label>
+
+        <!-- Second Column -->
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="first-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="second-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="third-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="fourth-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="fifth-column">BINGO</span>
+        </label>
+
+        <!-- Third Column -->
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="first-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="second-column">BINGO</span>
+        </label>
+
+        <!-- START OF FREE SLOT-->
+        <div class="checkbox-wrapper bingo-cell free-third-column">
+          <div class="checkbox-input"></div>
+          <i class="bi bi-star-fill free-slot-star"></i>
+        </div>
+        <!-- END OF FREE SLOT-->
+
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="fourth-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="fifth-column">BINGO</span>
+        </label>
+
+        <!-- Fourth Column -->
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="first-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="second-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="third-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="fourth-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="fifth-column">BINGO</span>
+        </label>
+
+        <!-- Fifth Column -->
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="first-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="second-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="third-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="fourth-column">BINGO</span>
+        </label>
+        <label class="checkbox-wrapper bingo-cell">
+          <input type="checkbox" />
+          <div class="checkbox-input"></div>
+          <span class="fifth-column">BINGO</span>
+        </label>
+
+
+      </div>
+    </section>
+
+    <section class="host-controls">
+      <h2>Host Module</h2>
+      <p><b>Manual Play.</b> Click to call a new food.</p>
+      <p><b>Auto Play.</b> Calls a new food automatically every 8 seconds.</p>
+      <p><b>Pause.</b> Stops Auto Play.</p>
+      <p><b>Reset.</b> Clears the called foods list to start a new game.</p>
+
+
+
+      <div class="host-buttons">
+        <button class="card-button manual-call">Manual play</button>
+        <div class="autoplay-buttons">
+          <button class="card-button-half auto-play">Auto play</button>
+          <button class="card-button-half pause">Pause</button>
+        </div>
+        <button class="card-button reset">Reset</button>
+      </div>
+
+      <textarea class="called-words-list" placeholder="Called food will appear here" readonly></textarea>
+
+    </section>
+
+  </div>
+
+  <script src="variables.js"></script>
+  <script src="functions.js"></script>
+
+</body>
+
+</html>
