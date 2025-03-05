@@ -20,6 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
         element.textContent = randomValues[index];
       });
     });
+
+    // Uncheck all checkboxes when randomising
+    document.querySelectorAll(".checkbox-wrapper input").forEach((checkbox) => {
+      checkbox.checked = false;
+    });
   });
 
   // Clear Button: unchecks all checkboxes on the bingo card
