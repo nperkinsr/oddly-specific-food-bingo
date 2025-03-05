@@ -65,26 +65,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Auto Play
   // When the Auto Play button is clicked, a new word is added immediately
-  // and then every 8 seconds thereafter until all words are used...
+  // and then every 8 seconds thereafter until aaaaaall words are used...
   let autoPlayInterval = null;
-  document.querySelector(".auto-play").addEventListener("click", () => {
-    if (autoPlayInterval !== null) return; // Ignores if already running
+  const autoPlayButton = document.querySelector(".auto-play");
 
-    // If paused, reset the pause button
-    if (isPaused) {
-      isPaused = false;
-      pauseButton.style.backgroundColor = "";
-      pauseButton.textContent = "Pause"; // Reset text/icon
+  autoPlayButton.addEventListener("click", () => {
+    if (autoPlayInterval === null) {
+      // Start auto play
+      callNewWord(); // Call a word immediately
+      autoPlayButton.style.backgroundColor = "#fc5dc4"; // Change button to pink
+
+      autoPlayInterval = setInterval(() => {
+        callNewWord();
+        if (calledWords.length === allWords.length) {
+          stopAutoPlay();
+        }
+      }, 8000);
+    } else {
+      // Stop auto play
+      stopAutoPlay();
     }
-
-    callNewWord(); // Call a word immediately
-    autoPlayInterval = setInterval(() => {
-      callNewWord();
-      if (calledWords.length === allWords.length) {
-        stopAutoPlay();
-      }
-    }, 8000);
   });
+
+  // Function to stop auto play (also used when the game is reset)
+  function stopAutoPlay() {
+    if (autoPlayInterval !== null) {
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = null;
+    }
+    autoPlayButton.style.backgroundColor = ""; // Reset button color
+  }
 
   // Pause Button
   // Clicking the Pause button toggles between pausing and resuming auto play
@@ -110,9 +120,23 @@ document.addEventListener("DOMContentLoaded", () => {
           if (calledWords.length === allWords.length) {
             stopAutoPlay();
           }
-        }, 3000);
+        }, 8000);
       }
     }
+  });
+
+  // Reset Button
+  // Reset Button: Clears the called words and resets the game
+  document.querySelector(".reset").addEventListener("click", () => {
+    calledWords = []; // Clear the array
+    updateCalledWordsDisplay(); // Update the display
+
+    stopAutoPlay(); // Stop auto-play if running
+
+    // Reset pause button state
+    isPaused = false;
+    pauseButton.style.backgroundColor = "";
+    pauseButton.textContent = "Pause";
   });
 
   // Returns a randomisd subset of the given array
